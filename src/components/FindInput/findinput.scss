@@ -1,0 +1,46 @@
+$height: 30px;
+$width: 250px;
+$color: rgba(34, 136, 27, 1);
+
+.findInput{
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border: 1px $color solid;
+  border-radius: 3px;
+
+  .findInput__flexContainer{
+    display: flex;
+    height: 100%;
+
+    input[type="text"]{
+      outline: none;
+      border: none;
+      width: $width - $height;
+      line-height: 1;
+      padding: 0 5px;
+    }
+
+    button{
+      outline: none;
+      background: $color;
+      border: none;
+      width: $height;
+      display: block;
+      padding: 5px;
+
+      &:hover{
+        background: transparentize($color, 0.2);
+      }
+
+
+
+      img{
+        height: 100%;
+
+      }
+    }
+  }
+
+
+}

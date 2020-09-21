@@ -1,0 +1,24 @@
+header{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: #bae0c3;
+  z-index: 2;
+  border: 1px #22881b solid;
+  border-radius: 3px;
+
+  &>*{
+    align-self: center;
+    align-items: center;
+  }
+
+  .header__auth{
+    display: flex;
+
+    p{
+      margin-right: 20px;
+    }
+  }
+}

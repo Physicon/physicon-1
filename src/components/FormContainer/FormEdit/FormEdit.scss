@@ -1,0 +1,39 @@
+$mainColor: #22881b;
+
+.formEdit{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background: #fff;
+  border: $mainColor;
+  border-radius: 3px;
+  width: 300px;
+
+  .formEdit__title{
+    background: $mainColor;
+    color: #fff;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+  }
+
+  input[type="text"]{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    outline: none;
+    border: 1px $mainColor solid;
+    border-radius: 3px;
+    padding: 6px 10px;
+    line-height: 1;
+    margin: 10px auto;
+  }
+
+  .formEdit__buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px 0;
+  }
+}

@@ -1,0 +1,9 @@
+$width: 800px;
+
+.wrapper{
+  margin: 0 auto;
+  max-width: $width;
+  min-width: $width;
+  box-sizing: border-box;
+
+}

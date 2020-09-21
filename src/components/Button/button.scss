@@ -1,0 +1,19 @@
+.button {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: #22881b;
+  color: #fff;
+  padding: 5px 15px;
+  transition: all 0.1s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    color: #22881b;
+    border: 1px #22881b solid;
+    background: #fff;
+  }
+}
