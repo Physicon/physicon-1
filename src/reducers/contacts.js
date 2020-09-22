@@ -1,6 +1,7 @@
 const initialState = {
     contacts: [],
     findingString: '',
+    sortBy: 'firstName',
 };
 
 export default function contactsReduser(state = initialState, action) {
@@ -19,6 +20,8 @@ export default function contactsReduser(state = initialState, action) {
         case 'EDIT_CONTACT':
             const newContacts = state.contacts.filter(contact => contact.id !== action.payload.id);
             return {...state, contacts: [...newContacts, action.payload]};
+        case 'SET_SORT_BY':
+            return {...state, sortBy: action.payload};
         default:
             return state;
     }

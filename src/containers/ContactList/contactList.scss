@@ -1,12 +1,32 @@
 .contactsList{
-  .contactsList__header{
+  .contactList__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #22881b;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px 0 10px 0;
+
+    .contactList__header{
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0 10px 0;
+    }
+
+    .sorting{
+      display: flex;
+      align-items: center;
+
+      p{
+        margin: 0 20px 0 0;
+      }
+    }
   }
+
 
   &>*{
     margin-bottom: 10px;
+  }
+
+  &>div:first-child{
+    margin: 0;
   }
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import ContactCard from '../../components/ContactCard/ContactCard';
 import PropTypes from 'prop-types';
 import './contactList.scss';
+import Select from '../../components/Select/Select';
+
 
 
 function ContactList(props) {
@@ -21,7 +23,13 @@ function ContactList(props) {
         return matched;
     });
 
-    filteredContacts.sort((a,b) => a.lastName > b.lastName ? 1 : -1);
+    filteredContacts.sort((a,b) => a[props.sortBy] > b[props.sortBy] ? 1 : -1);
+
+    const selectItems = [
+        {option: 'First name', value: 'firstName'},
+        {option: 'Last name', value: 'lastName'},
+        {option: 'Company', value: 'company'},
+    ];
 
     const contactCards = filteredContacts.map(contact =>(
         <ContactCard contact={contact}
@@ -34,7 +42,13 @@ function ContactList(props) {
 
     return (
         <div className={'contactsList'}>
-            <p className="contactsList__header">Мои контакты</p>
+            <div className="contactList__top">
+                <p className={'contactList__header'}>Мои контакты</p>
+                <div className={'sorting'}>
+                    <p>Sort by:</p>
+                    <div><Select sendData={props.setSortBy} items={selectItems} value={props.sortBy}/></div>
+                </div>
+            </div>
             {contactCards}
         </div>
     );
@@ -46,6 +60,8 @@ ContactList.propTypes = {
     findingString: PropTypes.string.isRequired,
     deleteContact: PropTypes.func.isRequired,
     showFormEditContact: PropTypes.func.isRequired,
+    setSortBy: PropTypes.func.isRequired,
+    sortBy: PropTypes.string.isRequired,
 };
 
 

@@ -172,3 +172,11 @@ function editContact(contact) {
         payload: contact,
     }
 }
+
+
+export function setSortBy(sortBy) {
+    return {
+        type: 'SET_SORT_BY',
+        payload: sortBy,
+    };
+}
