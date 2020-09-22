@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import editIcon from './edit-icon.png';
 import deleteIcon from './delete-icon.png';
-import './contactCard.scss';
+import './style.scss';
 
 
 function ContactCard(props) {

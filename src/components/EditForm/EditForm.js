@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Modal from '../../Modal/Modal';
-import './FormEdit.scss';
-import Button from '../../../components/Button/Button';
+import Modal from '../Modal/Modal';
+import './style.scss';
+import Button from '../../components/Button/Button';
 
 
 
-class FormEdit extends Component{
+class EditForm extends Component{
     constructor(props){
         super(props);
 
@@ -88,7 +88,7 @@ class FormEdit extends Component{
     }
 }
 
-FormEdit.defaultProps = {
+EditForm.defaultProps = {
     contact: {
         id: '',
         firstName: '',
@@ -100,7 +100,7 @@ FormEdit.defaultProps = {
 };
 
 
-FormEdit.propTypes = {
+EditForm.propTypes = {
     contact: PropTypes.shape({
         id: PropTypes.string,
         firstName: PropTypes.string,
@@ -115,4 +115,4 @@ FormEdit.propTypes = {
 };
 
 
-export default FormEdit;
+export default EditForm;

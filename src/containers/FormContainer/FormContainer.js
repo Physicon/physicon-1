@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FormEdit from './FormEdit/FormEdit';
+import EditForm from '../../components/EditForm/EditForm';
 
 
 function FormContainer(props) {
     if (!props.visible) return null;
     if (props.formType === 'NEW'){
         return (
-            <FormEdit
+            <EditForm
                 sendData={props.addNewContact}
                 closeForm={props.closeFormEdit}
                 formTitle={'Новый контакт'}
@@ -22,7 +22,7 @@ function FormContainer(props) {
 
 
     return (
-        <FormEdit sendData={props.editContact}
+        <EditForm sendData={props.editContact}
                   closeForm={props.closeFormEdit}
                   formTitle={'Изменить контакт'}
                   contact={contact}

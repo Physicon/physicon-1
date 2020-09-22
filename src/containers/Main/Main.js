@@ -5,10 +5,10 @@ import {getContacts, clearContacts, setFindingString, deleteContactFetch as dele
         addNewContactFetch as addNewContact, editContactFetch as editContact} from '../../actions/contacts';
 import Header from '../../components/Header/Header';
 import Wrapper from '../../components/Wrapper/Wrapper';
-import '../../components/ContactList/ContactList';
-import ContactList from "../../components/ContactList/ContactList";
+import '../ContactList/ContactList';
+import ContactList from "../ContactList/ContactList";
 import {closeFormEdit, showFormEditContact, showFormNewContact} from '../../actions/applicationView';
-import FormContainer from '../../components/FormContainer/FormContainer'
+import FormContainer from '../FormContainer/FormContainer'
 
 
 class Main extends React.Component{

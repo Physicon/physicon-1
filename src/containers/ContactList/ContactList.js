@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactCard from './ContactCard/ContactCard';
+import ContactCard from '../../components/ContactCard/ContactCard';
 import PropTypes from 'prop-types';
 import './contactList.scss';
 

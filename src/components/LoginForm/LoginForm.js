@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Button from "../Button/Button";
 import PropTypes from 'prop-types';
-import './loginForm.scss';
+import './style.scss';
 
 
 

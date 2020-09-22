@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './header.scss';
+import './style.scss';
 import Button from '../../components/Button/Button';
 import FindInput from '../FindInput/FindInput';
 
