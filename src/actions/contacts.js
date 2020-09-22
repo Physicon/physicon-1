@@ -1,8 +1,10 @@
 import {generateID} from '../lib/utils';
+import {showPreloader, hidePreloader} from './applicationView';
 
 
 export function deleteContactFetch(id) {
     return dispatch => {
+        dispatch(showPreloader());
         const token = localStorage.getItem('token');
         fetch('/contacts', {
             method: 'delete',
@@ -23,12 +25,16 @@ export function deleteContactFetch(id) {
                 console.log(error.message);
                 dispatch({type: 'NOTHING'});
             })
+            .finally(()=>{
+                dispatch(hidePreloader());
+            })
     };
 }
 
 
 export function getContacts() {
     return dispatch => {
+        dispatch(showPreloader());
         const token = localStorage.getItem('token');
         fetch('/contacts', {
             method: 'get',
@@ -48,12 +54,16 @@ export function getContacts() {
                 console.log(error.message);
                 dispatch(addContacts([]));
             })
+            .finally(() => {
+                dispatch(hidePreloader());
+            })
     };
 };
 
 
 export function addNewContactFetch(contact) {
     return dispatch => {
+        dispatch(showPreloader());
         const token = localStorage.getItem('token');
         contact.id = generateID(contact);
         fetch('/contacts', {
@@ -74,7 +84,10 @@ export function addNewContactFetch(contact) {
             .catch(error => {
                 console.log(error.message);
                 dispatch({type: 'NOTHING'});
-            });
+            })
+            .finally(() => {
+                dispatch(hidePreloader());
+            })
     };
 }
 
@@ -84,6 +97,7 @@ export function addNewContactFetch(contact) {
  */
 export function editContactFetch(contact) {
     return dispatch => {
+        dispatch(showPreloader());
         const token = localStorage.getItem('token');
         fetch('/contacts', {
             method: 'put',
@@ -103,7 +117,10 @@ export function editContactFetch(contact) {
             .catch(error => {
                 console.log(error.message);
                 dispatch({type: 'NOTHING'});
-            });
+            })
+            .finally(() => {
+                dispatch(hidePreloader());
+            })
     };
 }
 
@@ -138,7 +155,6 @@ export function setFindingString(string) {
 
 
 /**
- *
  * @param {string} id
  * @returns {{payload: string, type: string}}
  */

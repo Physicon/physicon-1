@@ -1,8 +1,9 @@
 .modal{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: #25252570;
+  z-index: 99;
 }

@@ -1,0 +1,51 @@
+$quantity: 12;
+$color: #22881b;
+$angle: 360/$quantity;
+$modalBackground: #ffffff90;
+$size: 100px;
+
+.preloader{
+  background: $modalBackground;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+
+  .preloader__SVG{
+    height: $size;
+    width: $size;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    .g-circles {
+      fill: $color;
+    }
+
+    .u-circle {
+      transform-origin: $size/2 $size/2;
+      animation: opacity 1.2s linear infinite;
+
+      @for $item from 1 through $quantity {
+        &:nth-child(#{$quantity}n + #{$item}){
+          transform: rotate(#{-$angle*$item}deg) translate(10px, 10px) scale(.85);
+          animation-delay: -#{$item/10}s;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes opacity {
+  0% {
+    fill-opacity: 1;
+  }
+  75% {
+    fill-opacity: 0;
+  }
+}
