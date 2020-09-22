@@ -30,3 +30,4 @@ password: 111
 
 Эта команда, используя библиотеку concurrently, запускает одновременно и frontend и 
 backend.
+

@@ -8,7 +8,7 @@ export default function contactsReduser(state = initialState, action) {
         case 'ADD_CONTACTS':
             return {...state, contacts: [...state.contacts, ...action.payload]};
         case 'CLEAR_CONTACTS':
-            return {...state, contacts: []};
+            return {...state, contacts: [], findingString: ''};
         case 'SET_FINDING_STRING':
             return {...state, findingString: action.payload};
         case 'DELETE_CONTACT':

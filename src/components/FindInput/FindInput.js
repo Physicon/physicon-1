@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import './findinput.scss';
+import './findInput.scss';
 import icon from './search-icon.svg';
 
 
-function FindButton(props) {
+function FindInput(props) {
     const [value, setValue] = useState('');
 
     const handleChange = event =>{
@@ -33,9 +33,9 @@ function FindButton(props) {
 }
 
 
-FindButton.propTypes = {
+FindInput.propTypes = {
     sendString: PropTypes.func.isRequired,
 };
 
 
-export default FindButton;
+export default FindInput;

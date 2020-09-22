@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './header.scss';
 import Button from '../../components/Button/Button';
-import FindInput from '../../components/FindInput/FindButton';
+import FindInput from '../FindInput/FindInput';
 
 
 
