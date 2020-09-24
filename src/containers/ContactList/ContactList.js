@@ -23,7 +23,7 @@ function ContactList(props) {
         return matched;
     });
 
-    filteredContacts.sort((a,b) => a[props.sortBy] > b[props.sortBy] ? 1 : -1);
+    filteredContacts.sort((a,b) => a[props.sortBy].toLowerCase() > b[props.sortBy].toLowerCase() ? 1 : -1);
 
     const selectItems = [
         {option: 'First name', value: 'firstName'},
