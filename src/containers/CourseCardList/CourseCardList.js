@@ -28,19 +28,22 @@ function CourseCardList(props) {
 
 
     const courseCards = courses.map(course => (
-        <CourseCard courseId={course.courseId}
-                    subject={course.subject}
-                    genre={course.genre}
-                    grade={getGrade(course.grade)}
-                    price={`${course.price} ${props.unit}`}
-                    key = {course.courseId}
-        />
+        <div className={'courseCardList__elemContainer'} key = {course.courseId}>
+            <CourseCard courseId={course.courseId}
+                        subject={course.subject}
+                        genre={course.genre}
+                        grade={getGrade(course.grade)}
+                        price={`${course.price} ${props.unit}`}
+                        shopUrl={course.shopUrl}
+            />
+        </div>
+
     ));
 
     return (
         <div className={'courseCardList'}>
             <p className="courseCardList__findResult">{textContentFindResult}</p>
-            <div className="courseCardList__cardContainer">
+            <div className="courseCardList__cardsContainer">
                 {courseCards}
             </div>
         </div>

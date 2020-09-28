@@ -1,0 +1,14 @@
+.radioGroup{
+  font-size: 14px;
+  min-width: 61px;
+}
+
+.radioGroup__item{
+  text-align: right;
+}
+
+@media screen and (max-width: 768px){
+  .radioGroup__item{
+    text-align: left;
+  }
+}

@@ -14,7 +14,7 @@ function CourseCard(props) {
                 <p className="courseCard__subject">{props.subject}</p>
                 <p className="courseCard__grade">{props.grade}</p>
                 <p className="courseCard__genre">{props.genre}</p>
-                <p className="courseCard__descriptionRef"><a href="#">Подробнее</a></p>
+                <p className="courseCard__descriptionRef"><a href={props.shopUrl}>Подробнее</a></p>
                 <div className="courseCard__button">
                     <Button textContent={props.price} onClick={null}/>
                 </div>
@@ -30,6 +30,7 @@ CourseCard.propTypes = {
     genre: PropTypes.string.isRequired,
     grade: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
+    shopUrl: PropTypes.string.isRequired,
 };
 
 

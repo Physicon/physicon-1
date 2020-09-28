@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fakeFetch as getCourses, setFindSubject, setFindGenre, setFindGrade, setFindString, setUnit}
+import {coursesFetch as getCourses, setFindSubject, setFindGenre, setFindGrade, setFindString, setUnit}
   from '../../actions/courses'; //сейчас фейковый запрос
 import Showcase from '../../components/Showcase/Showcase';
 

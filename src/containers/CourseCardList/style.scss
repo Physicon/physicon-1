@@ -6,8 +6,12 @@
   padding: 1em 0;
 }
 
-.courseCardList__cardContainer{
+.courseCardList__cardsContainer{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.courseCardList__elemContainer{
+  padding: 0 14px 55px 14px;
 }

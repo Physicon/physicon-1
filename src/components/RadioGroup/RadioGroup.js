@@ -1,5 +1,6 @@
 import React, {useState}from 'react';
 import PropTypes from 'prop-types';
+import './style.scss';
 
 
 function RadioGroup(props) {
@@ -18,42 +19,25 @@ function RadioGroup(props) {
 
     const radioInputs = state.options.map((item, index) => {
         return (
-            <div className={'radioGroup__item'}>
+            <div className={'radioGroup__item'} key={index.toString()}>
+                <label htmlFor={`${props.uniqueId}_${index}`}>{item.label}</label>
                 <input type="radio"
                        name={props.uniqueId}
                        id={`${props.uniqueId}_${index}`}
                        checked={item.value === state.selectedValue}
-                       key={index.toString()}
                        value={item.value}
                        onChange={handleChange}
                 />
-                <label for={`${props.uniqueId}_${index}`}>{item.label}</label>
             </div>
         );
     });
+
     return (
         <div className={'radioGroup'}>
             {radioInputs}
         </div>
     );
 }
-
-/*function RadioInput(props){
-    return (
-        <div className={'radioGroup__item'}>
-            <div className={this.props.isChecked ? 'radioGroup__item_checked' : 'radioGroup__item_unchecked'}
-                 data-value={this.props.value}>
-            </div>
-            <label>{props.inputLabel}</label>
-        </div>
-    );
-}*/
-
-/*RadioInput.propTypes = {
-    inputLabel: PropTypes.string.isRequired,
-    isChecked: PropTypes.bool.isRequired,
-    value: PropTypes.string.isRequired,
-};*/
 
 
 RadioGroup.propTypes = {
