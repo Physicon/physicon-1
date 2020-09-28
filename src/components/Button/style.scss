@@ -1,14 +1,17 @@
 .button {
+  display: block;
   outline: none;
   border: none;
-  border-radius: 3px;
-  background: #22881b;
   color: #fff;
-  padding: 5px 15px;
-  transition: all 0.1s;
+  text-align: center;
+  padding: .4em .1em;
+  border-radius: 6px;
+  background: #00c1ff;
+  font-size: 12px;
+  width: 100%;
 
   &:hover {
-    transform: scale(1.05);
+    background: #00aee6;
   }
 
   &:active {

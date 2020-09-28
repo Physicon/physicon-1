@@ -1,0 +1,13 @@
+.courseCardList__findResult{
+  font-size: 24px;
+  height: 1em;
+  font-weight: 300;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.courseCardList__cardContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

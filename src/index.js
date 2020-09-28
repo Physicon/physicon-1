@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'normalize.css';
+import 'reset.css';
 import './fonts/RobotoCondensed/stylesheet.css';
-import './index.css';
+import './index.scss';
 import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
 import {createStore, applyMiddleware} from 'redux';

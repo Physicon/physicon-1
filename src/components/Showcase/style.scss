@@ -1,0 +1,17 @@
+.showcase{
+    h1{
+        font-size: 36px;
+        text-align: center;
+        font-weight: 300;
+        padding: 0.67em 0;
+    }
+}
+
+.showcase__findSetting{
+    display: flex;
+    justify-content: space-between;
+
+    &>div{
+        width: 23.15%;
+    }
+}

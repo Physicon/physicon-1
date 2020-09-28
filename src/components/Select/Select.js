@@ -16,8 +16,7 @@ function Select(props) {
         <select className={'select'} onChange={onChange} value={props.value}>
             {options}
         </select>
-    )
-    ;
+    );
 }
 
 

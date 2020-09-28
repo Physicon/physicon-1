@@ -1,0 +1,31 @@
+.findInput{
+  display: inline-block;
+  height: 2.3em;
+  font-size: 14px;
+
+  .findInput__flexContainer{
+    display: flex;
+    height: 100%;
+
+    input{
+      outline: none;
+      border: 1px #706f6f solid;
+      border-radius: 6px;
+      padding: 0.4em 0.5em;
+    }
+
+    button{
+      outline: none;
+      background: #fff;
+      border: none;
+      display: block;
+
+      img{
+        margin: 0 auto;
+        vertical-align: middle;
+      }
+    }
+  }
+
+
+}

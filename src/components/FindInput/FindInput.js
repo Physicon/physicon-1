@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import './findInput.scss';
-import icon from './search-icon.svg';
+import './style.scss';
+import icon from './icon-search-25.png';
 
 
 function FindInput(props) {
@@ -23,9 +23,10 @@ function FindInput(props) {
                 <input type="text"
                        value={value}
                        onChange={handleChange}
+                       placeholder={'Поиск'}
                 />
                 <button onClick={handleClick}><img src={icon}
-                             alt="find"/>
+                             alt="Поиск"/>
                 </button>
             </div>
         </div>
