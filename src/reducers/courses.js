@@ -4,6 +4,7 @@ const initialState = {
     findGenre: '',
     findGrade: '',
     findString: '',
+    unit: 'руб',
 };
 
 export default function coursesReducer(state = initialState, action) {
@@ -18,6 +19,8 @@ export default function coursesReducer(state = initialState, action) {
             return {...state, findGrade: action.payload};
         case 'SET_FIND_STRING':
             return {...state, findString: action.payload};
+        case 'SET_UNIT':
+            return {...state, unit: action.payload};
         default:
             return state;
     }

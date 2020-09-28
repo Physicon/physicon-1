@@ -32,7 +32,7 @@ function CourseCardList(props) {
                     subject={course.subject}
                     genre={course.genre}
                     grade={getGrade(course.grade)}
-                    price={`${course.price} руб`}
+                    price={`${course.price} ${props.unit}`}
                     key = {course.courseId}
         />
     ));
@@ -54,6 +54,7 @@ CourseCardList.propTypes = {
     findGrade: PropTypes.string.isRequired,
     findGenre: PropTypes.string.isRequired,
     findString: PropTypes.string.isRequired,
+    unit: PropTypes.string.isRequired,
 };
 
 
