@@ -21,7 +21,7 @@ class Showcase extends Component {
         const genreOptions = getOptionsSelect(this.props.courses, 'genre', 'Все жанры');
         const gradeOptions = getOptionsGradeSelect();
 
-        const group = [
+        const radioGroupItems = [
             {label: 'Рубли', value: 'руб'},
             {label: 'Баллы', value: 'баллов'},
         ];
@@ -50,7 +50,11 @@ class Showcase extends Component {
                             <FindInput sendString={this.props.setFindString}/>
                         </div>
                         <div>
-                            <RadioGroup uniqueId={'unit'} items={group} defaultValue={'руб'} sendData={this.props.setUnit}/>
+                            <RadioGroup uniqueId={'unit'}
+                                        items={radioGroupItems}
+                                        defaultValue={'руб'}
+                                        sendData={this.props.setUnit}
+                            />
                         </div>
                     </div>
                     <CourseCardList courses={this.props.courses}
@@ -62,7 +66,6 @@ class Showcase extends Component {
                     />
                 </div>
             </Wrapper>
-
         );
     }
 }
@@ -81,5 +84,6 @@ Showcase.propTypes = {
     setFindString: PropTypes.func.isRequired,
     setUnit: PropTypes.func.isRequired,
 };
+
 
 export default Showcase;

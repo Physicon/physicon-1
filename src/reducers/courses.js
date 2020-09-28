@@ -7,6 +7,7 @@ const initialState = {
     unit: 'руб',
 };
 
+
 export default function coursesReducer(state = initialState, action) {
     switch (action.type) {
         case 'ADD_COURSES':

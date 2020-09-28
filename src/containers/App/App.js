@@ -6,9 +6,6 @@ import Showcase from '../../components/Showcase/Showcase';
 
 
 class App extends React.Component{
-
-
-
   render() {
     return(
         <Showcase courses={this.props.courses}
@@ -29,7 +26,6 @@ class App extends React.Component{
 }
 
 
-
 const mapStateToProps = state =>({
   courses: state.courses.courses,
   findSubject: state.courses.findSubject,
@@ -38,6 +34,7 @@ const mapStateToProps = state =>({
   findString: state.courses.findString,
   unit: state.courses.unit,
 });
+
 
 const mapDispatchToProps = dispatch =>({
   getCourses: () => dispatch(getCourses()),

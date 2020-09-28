@@ -6,7 +6,6 @@ import {getGrade} from '../../lib/utils';
 
 
 function CourseCardList(props) {
-
     let courses = props.courses;
 
     //фильтрация
@@ -37,7 +36,6 @@ function CourseCardList(props) {
                         shopUrl={course.shopUrl}
             />
         </div>
-
     ));
 
     return (
